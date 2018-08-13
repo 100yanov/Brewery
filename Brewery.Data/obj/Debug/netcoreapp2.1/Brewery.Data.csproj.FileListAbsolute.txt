@@ -1,0 +1,6 @@
+d:\stucky\projects\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Data.deps.json
+d:\stucky\projects\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Data.dll
+d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csprojAssemblyReference.cache
+d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csproj.CoreCompileInputs.cache
+d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.AssemblyInfoInputs.cache
+d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.AssemblyInfo.cs
