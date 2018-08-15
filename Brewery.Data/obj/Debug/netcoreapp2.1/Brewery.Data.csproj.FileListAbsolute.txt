@@ -4,3 +4,17 @@ d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csp
 d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csproj.CoreCompileInputs.cache
 d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.AssemblyInfoInputs.cache
 d:\stucky\projects\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.AssemblyInfo.cs
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Data.deps.json
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Data.runtimeconfig.json
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Data.runtimeconfig.dev.json
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Data.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Data.pdb
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Models.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Models.pdb
+D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csprojAssemblyReference.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csproj.CoreCompileInputs.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.AssemblyInfoInputs.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.AssemblyInfo.cs
+D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csproj.CopyComplete
+D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.pdb

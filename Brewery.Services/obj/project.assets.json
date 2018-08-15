@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\stucky\\projects\\Brewery\\Brewery.Services\\Brewery.Services.csproj",
+      "projectUniqueName": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Services\\Brewery.Services.csproj",
       "projectName": "Brewery.Services",
-      "projectPath": "d:\\stucky\\projects\\Brewery\\Brewery.Services\\Brewery.Services.csproj",
+      "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Services\\Brewery.Services.csproj",
       "packagesPath": "C:\\Users\\Desi\\.nuget\\packages\\",
-      "outputPath": "d:\\stucky\\projects\\Brewery\\Brewery.Services\\obj\\",
+      "outputPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

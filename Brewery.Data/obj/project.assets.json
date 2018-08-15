@@ -1346,6 +1346,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "Brewery.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Brewery.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Brewery.Models.dll": {}
+        }
       }
     }
   },
@@ -4409,10 +4419,16 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Brewery.Models/1.0.0": {
+      "type": "project",
+      "path": "../Brewery.Models/Brewery.Models.csproj",
+      "msbuildProject": "../Brewery.Models/Brewery.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Brewery.Models >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.1",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.1",
@@ -4426,11 +4442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\stucky\\projects\\Brewery\\Brewery.Data\\Brewery.Data.csproj",
+      "projectUniqueName": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Data\\Brewery.Data.csproj",
       "projectName": "Brewery.Data",
-      "projectPath": "d:\\stucky\\projects\\Brewery\\Brewery.Data\\Brewery.Data.csproj",
+      "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Data\\Brewery.Data.csproj",
       "packagesPath": "C:\\Users\\Desi\\.nuget\\packages\\",
-      "outputPath": "d:\\stucky\\projects\\Brewery\\Brewery.Data\\obj\\",
+      "outputPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4448,7 +4464,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Models\\Brewery.Models.csproj": {
+              "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Models\\Brewery.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
