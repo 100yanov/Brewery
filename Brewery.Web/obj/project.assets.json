@@ -4616,10 +4616,21 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Brewery.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Brewery.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Brewery.Core.dll": {}
+        }
+      },
       "Brewery.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Brewery.Core": "1.0.0",
           "Brewery.Models": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
@@ -12234,6 +12245,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Brewery.Core/1.0.0": {
+      "type": "project",
+      "path": "../Brewery.Core/Brewery.Core.csproj",
+      "msbuildProject": "../Brewery.Core/Brewery.Core.csproj"
     },
     "Brewery.Data/1.0.0": {
       "type": "project",

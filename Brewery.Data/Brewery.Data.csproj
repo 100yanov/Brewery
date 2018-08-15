@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Brewery.Core\Brewery.Core.csproj" />
     <ProjectReference Include="..\Brewery.Models\Brewery.Models.csproj" />
   </ItemGroup>
 

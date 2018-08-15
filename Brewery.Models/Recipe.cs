@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Brewery.Models
 {
-    public class Recipe : BaseEntity
-    {
+    public class Recipe : BaseEntity<Guid>
+	{
 		
 		public Recipe()
 		{

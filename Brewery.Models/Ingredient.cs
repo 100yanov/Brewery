@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace Brewery.Models
 {
-    public class Ingredient : BaseEntity
-    {
+    public class Ingredient : BaseEntity<Guid>
+	{
 		public Ingredient()
 		{
 			this.Recipes = new List<IngredientForRecipe>();

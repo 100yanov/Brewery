@@ -1347,6 +1347,16 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "Brewery.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Brewery.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Brewery.Core.dll": {}
+        }
+      },
       "Brewery.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -4420,6 +4430,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "Brewery.Core/1.0.0": {
+      "type": "project",
+      "path": "../Brewery.Core/Brewery.Core.csproj",
+      "msbuildProject": "../Brewery.Core/Brewery.Core.csproj"
+    },
     "Brewery.Models/1.0.0": {
       "type": "project",
       "path": "../Brewery.Models/Brewery.Models.csproj",
@@ -4428,6 +4443,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Brewery.Core >= 1.0.0",
       "Brewery.Models >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.1",
@@ -4465,6 +4481,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Core\\Brewery.Core.csproj": {
+              "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Core\\Brewery.Core.csproj"
+            },
             "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Models\\Brewery.Models.csproj": {
               "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Models\\Brewery.Models.csproj"
             }

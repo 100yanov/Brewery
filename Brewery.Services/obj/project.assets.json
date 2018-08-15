@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Brewery.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Brewery.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Brewery.Core.dll": {}
+        }
       }
     }
   },
@@ -673,10 +683,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Brewery.Core/1.0.0": {
+      "type": "project",
+      "path": "../Brewery.Core/Brewery.Core.csproj",
+      "msbuildProject": "../Brewery.Core/Brewery.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Brewery.Core >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -709,7 +725,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Core\\Brewery.Core.csproj": {
+              "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Core\\Brewery.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

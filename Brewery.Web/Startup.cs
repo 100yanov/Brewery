@@ -40,6 +40,9 @@ namespace Brewery.Web
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<BreweryDbContext>();
+			
+			//todo: add repositories services.AddScoped<>
+			//todo: add use cases
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

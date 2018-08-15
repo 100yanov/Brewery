@@ -1,11 +1,15 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Brewery.Models
 {
-	public class BaseEntity
+	public abstract class BaseEntity<TKey>
+		where TKey: struct
 	{
-		public Guid Id { get; set; }
-		public String Name { get; set; }
+		[Key]
+		public TKey Id { get; set; }
+		[Required]
+		public string Name { get; set; }
 
 	}
 }
