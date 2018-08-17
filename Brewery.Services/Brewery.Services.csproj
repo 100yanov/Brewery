@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Brewery.Core\Brewery.Core.csproj" />
+  </ItemGroup>
+
 </Project>
