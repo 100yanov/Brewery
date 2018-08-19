@@ -5,12 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Brewery.Web.Models;
+using Brewery.Core.Contracts.Managers;
+using Brewery.Core.Contracts.Repositories;
 
 namespace Brewery.Web.Controllers
 {
+	
+	
+
     public class HomeController : Controller
     {
-        public IActionResult Index()
+	
+		public IActionResult Index()
         {
             return View();
         }

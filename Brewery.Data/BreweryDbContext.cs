@@ -6,8 +6,9 @@ using System;
 
 namespace Brewery.Data
 {
-	public class BreweryDbContext : IdentityDbContext<IdentityUser>
+	public class BreweryDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 	{
+
 		public DbSet<Recipe>Recipes{ get; set; }
 		public DbSet<Ingredient> Ingredients { get; set; }
 		public DbSet<Brew> Brews { get; set; }
@@ -20,6 +21,7 @@ namespace Brewery.Data
 			
 		}
 
+		
 		protected override void OnConfiguring( DbContextOptionsBuilder optionsBuilder )
 		{
 			if (!optionsBuilder.IsConfigured)

@@ -18,3 +18,5 @@ D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data
 D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.csproj.CopyComplete
 D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.dll
 D:\stucky\Web Advanced\Brewery\Brewery.Data\obj\Debug\netcoreapp2.1\Brewery.Data.pdb
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Core.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Data\bin\Debug\netcoreapp2.1\Brewery.Core.pdb

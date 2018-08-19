@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v2.1": {
       "Brewery.Data/1.0.0": {
         "dependencies": {
+          "Brewery.Core": "1.0.0",
           "Brewery.Models": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
@@ -880,7 +881,15 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "Brewery.Core/1.0.0": {
+        "runtime": {
+          "Brewery.Core.dll": {}
+        }
+      },
       "Brewery.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "2.1.2"
+        },
         "runtime": {
           "Brewery.Models.dll": {}
         }
@@ -1494,6 +1503,11 @@
       "sha512": "sha512-k1S4Gc6IGwtHGT8188RSeGaX86Qw/wnrgNLshJvsdNUOPP9etMmo8S07c+UlOAx4K/xLuN9ivA1bD0LVurtIxQ==",
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
+    },
+    "Brewery.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Brewery.Models/1.0.0": {
       "type": "project",

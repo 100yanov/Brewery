@@ -1360,6 +1360,9 @@
       "Brewery.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "2.1.2"
+        },
         "compile": {
           "bin/placeholder/Brewery.Models.dll": {}
         },

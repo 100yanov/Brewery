@@ -12,6 +12,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Brewery.Data\Brewery.Data.csproj" />
+    <ProjectReference Include="..\Brewery.Services\Brewery.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Shared\DisplayTemplates\" />
+    <Folder Include="Areas\Identity\Services\" />
   </ItemGroup>
 
 </Project>

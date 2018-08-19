@@ -4646,11 +4646,27 @@
       "Brewery.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "2.1.2"
+        },
         "compile": {
           "bin/placeholder/Brewery.Models.dll": {}
         },
         "runtime": {
           "bin/placeholder/Brewery.Models.dll": {}
+        }
+      },
+      "Brewery.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Brewery.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Brewery.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Brewery.Services.dll": {}
         }
       }
     }
@@ -12260,11 +12276,17 @@
       "type": "project",
       "path": "../Brewery.Models/Brewery.Models.csproj",
       "msbuildProject": "../Brewery.Models/Brewery.Models.csproj"
+    },
+    "Brewery.Services/1.0.0": {
+      "type": "project",
+      "path": "../Brewery.Services/Brewery.Services.csproj",
+      "msbuildProject": "../Brewery.Services/Brewery.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Brewery.Data >= 1.0.0",
+      "Brewery.Services >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
@@ -12302,6 +12324,9 @@
           "projectReferences": {
             "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Data\\Brewery.Data.csproj": {
               "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Data\\Brewery.Data.csproj"
+            },
+            "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Services\\Brewery.Services.csproj": {
+              "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Services\\Brewery.Services.csproj"
             }
           }
         }
