@@ -1,0 +1,20 @@
+﻿@model IngredientListViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+
+    @foreach (var i in Model.Ingredients)
+    {
+        <li>
+            <ul>
+                <li>Name: @i.Name</li>
+                <li>Name: @i.Quantity</li>
+            </ul>
+        </li>
+    }
+
+</ul>
+
