@@ -80,9 +80,12 @@ namespace Brewery.Web.Areas.Admin.Controllers
         public ActionResult Edit(string id)
         {
 			var recipe = this.manager.Find(Guid.Parse(id));
-			var availableIngredients = this.manager.GetAvailableIngredients();
-			recipe.Ingredients.ToList().AddRange(availableIngredients);
-			return View();
+			var availableIngredients = this.manager.GetAvailableIngredients()
+                .Where(i=>!recipe.Ingredients.Select(ri=>ri.Id)
+                .Contains(i.Id)).ToList();
+			//recipe.Ingredients.ToList().AddRange(availableIngredients);
+            RecipeBindingModel model = new RecipeBindingModel(recipe,availableIngredients);
+            return View(model);
         }
 
         // POST: Recipe/Edit/5
@@ -90,9 +93,25 @@ namespace Brewery.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(RecipeBindingModel model, string id)
         {
+            
             try
             {
-                // TODO: Add update logic here
+                var ingredients = model.Ingredients.Where(i => i.Quantity > 0)
+                    .Select(i => new IngredientDomModel
+                    {
+                        Id = Guid.Parse(i.Id),
+                        Quantity = i.Quantity
+                    });
+
+                var recipeDom = new RecipeDomModel
+                {
+                    Id = Guid.Parse(id),
+                    Name = model.Name,
+                    Description = model.Description,
+                    Ingredients = ingredients.ToList()
+                };
+
+                this.manager.Edit(recipeDom);
 
                 return RedirectToAction(nameof(Index));
             }

@@ -13,19 +13,21 @@ namespace Brewery.Web.Areas.Admin.Models.BindingModels
 	{
 		public RecipeBindingModel()
 		{
-			
+            this.Ingredients = new List<RecipeIngredientBindingModel>();
 		}
 		public RecipeBindingModel( ICollection<IngredientDomModel> availableIngredients )
+            :this()
 		{
 			this.Ingredients = availableIngredients.Select(i => new RecipeIngredientBindingModel(i)).ToList();
 		}
-		public RecipeBindingModel(RecipeDomModel model, List<IngredientDomModel> availableIngredients)
+        public RecipeBindingModel(RecipeDomModel model, List<IngredientDomModel> availableIngredients)
+            : this()
 		{
 			this.Name = model.Name;
 			this.Description = model.Description;
-			 model.Ingredients.ToList().AddRange(availableIngredients);
+			//model.Ingredients.Concat(availableIngredients);
 			
-			this.Ingredients= model.Ingredients.Select(i => new RecipeIngredientBindingModel(i)).ToList(); ;
+			this.Ingredients= model.Ingredients.Concat(availableIngredients).Select(i => new RecipeIngredientBindingModel(i)).ToList(); ;
 		}
 
 		[Required]

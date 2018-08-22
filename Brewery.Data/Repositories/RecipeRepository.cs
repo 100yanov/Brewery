@@ -43,7 +43,7 @@ namespace Brewery.Data.Repositories
 			
 			var recipeEntity = new Recipe
 			{
-
+                Id=domObj.Id,
 				Name = domObj.Name,
 				Description = domObj.Description,
 				Ingredients = domObj

@@ -7,3 +7,12 @@ D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core
 D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.dll
 D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.pdb
 D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.csprojAssemblyReference.cache
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\bin\Debug\netcoreapp2.1\Brewery.Core.deps.json
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\bin\Debug\netcoreapp2.1\Brewery.Core.dll
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\bin\Debug\netcoreapp2.1\Brewery.Core.pdb
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.csprojAssemblyReference.cache
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.csproj.CoreCompileInputs.cache
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.AssemblyInfoInputs.cache
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.AssemblyInfo.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.dll
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.pdb
