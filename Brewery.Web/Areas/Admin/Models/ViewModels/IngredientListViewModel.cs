@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace Brewery.Web.Areas.Admin.Models.ViewModels
 {
-	public class IngredientListViewModel
+	public class IngredientListViewModel 
 	{
 		public IngredientListViewModel()
 		{
 
 		}
-		public IngredientListViewModel(IEnumerable<IngredientDomModel> ingredients)
+		public IngredientListViewModel( ICollection<IngredientDomModel> ingredients)
 		{
 			this.Ingredients = ingredients.Select(i=>new IngredientViewModel(i)).ToArray();
 		}

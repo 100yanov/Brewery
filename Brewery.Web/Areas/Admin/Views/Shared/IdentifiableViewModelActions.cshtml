@@ -1,0 +1,7 @@
+﻿@model IdentifiableViewModel<string>
+<a asp-area="Admin" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-primary">Details</a>
+@if (this.User.IsInRole("Admin"))
+{
+    <a asp-area="Admin" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-area="Admin" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+}

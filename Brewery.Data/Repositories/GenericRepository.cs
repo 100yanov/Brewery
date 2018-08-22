@@ -122,7 +122,7 @@ namespace Brewery.Data.Repositories
 
 		}
 
-		public TDomObj Find(TKey id )
+		public virtual TDomObj Find(TKey id )
 		{
 			var entity = this.EntitySet.FirstOrDefault(e=>e.Id.Equals(id));
 			var domObj = this.EntityToDomain(entity);

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Brewery.Core.Contracts.Managers;
 using Brewery.Core.DomainModels;
 using Brewery.Web.Areas.Admin.Models.BindingModels;
+using Brewery.Web.Areas.Admin.Models.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,11 +23,16 @@ namespace Brewery.Web.Areas.Admin.Controllers
         // GET: Recipe
         public ActionResult Index()
         {
-            return View();
+			var model = new RecipeListViewModel();
+			var recipeDoms = this.manager.GetAll();
+			var modelRecipes = recipeDoms.Select(r => new RecipeViewModel(r));
+			model.Recipes = modelRecipes.ToList();
+
+			return View(model);
         }
 
         // GET: Recipe/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
             return View();
         }
@@ -35,6 +41,7 @@ namespace Brewery.Web.Areas.Admin.Controllers
         public ActionResult Create()
         {
 			var availableIngredients = this.manager.GetAvailableIngredients();
+			
 			var model = new RecipeBindingModel(availableIngredients);
 
             return View(model);
@@ -57,7 +64,7 @@ namespace Brewery.Web.Areas.Admin.Controllers
 				{
 					Name =model.Name,
 					Description =model.Description,
-					Ingredients = ingredients
+					Ingredients = ingredients.ToList()
 				};
 				var recipe = this.manager.Add(recipeDom);
 
@@ -70,15 +77,18 @@ namespace Brewery.Web.Areas.Admin.Controllers
         }
 
         // GET: Recipe/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+			var recipe = this.manager.Find(Guid.Parse(id));
+			var availableIngredients = this.manager.GetAvailableIngredients();
+			recipe.Ingredients.ToList().AddRange(availableIngredients);
+			return View();
         }
 
         // POST: Recipe/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(RecipeBindingModel model, string id)
         {
             try
             {

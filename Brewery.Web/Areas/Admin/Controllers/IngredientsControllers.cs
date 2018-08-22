@@ -25,7 +25,7 @@ namespace Brewery.Web.Areas.Admin.Controllers
 		public ActionResult Index()
 		{
 			var ingredients = this.manager.GetAll();
-			var model = new IngredientListViewModel(ingredients);
+			var model = new IngredientListViewModel(ingredients.ToList());
 
 			return View(model);
 		}

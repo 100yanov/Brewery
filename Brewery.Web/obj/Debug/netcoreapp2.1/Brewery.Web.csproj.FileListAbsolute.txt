@@ -85,3 +85,4 @@ D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\A
 D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Recipe\Create.g.cshtml.cs
 D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\EditorTemplates\RecipeIngredientBindingModel.g.cshtml.cs
 D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Recipe\Index.g.cshtml.cs
+D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\IdentifiableViewModelActions.g.cshtml.cs

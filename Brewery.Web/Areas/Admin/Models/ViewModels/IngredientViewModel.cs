@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Brewery.Web.Areas.Admin.Models.ViewModels
 {
-	public class IngredientViewModel
+	public class IngredientViewModel : IdentifiableViewModel<string>
 	{
 		public IngredientViewModel()
 		{
@@ -19,7 +19,7 @@ namespace Brewery.Web.Areas.Admin.Models.ViewModels
 			this.Quantity = ingredient.Quantity;
 		}
 		public string Name { get; set; }
-		public string Id { get; set; }
+		//public string Id { get; set; }
 		public double Quantity { get; set; }
 
 	}

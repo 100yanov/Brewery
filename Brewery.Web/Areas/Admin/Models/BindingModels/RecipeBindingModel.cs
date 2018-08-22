@@ -15,7 +15,7 @@ namespace Brewery.Web.Areas.Admin.Models.BindingModels
 		{
 			
 		}
-		public RecipeBindingModel( IEnumerable<IngredientDomModel> availableIngredients )
+		public RecipeBindingModel( ICollection<IngredientDomModel> availableIngredients )
 		{
 			this.Ingredients = availableIngredients.Select(i => new RecipeIngredientBindingModel(i)).ToList();
 		}
