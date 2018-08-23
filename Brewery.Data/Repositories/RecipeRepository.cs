@@ -15,14 +15,16 @@ namespace Brewery.Data.Repositories
 		public RecipeRepository( BreweryDbContext contextInjection )
 			: base(contextInjection)
 		{
-			
+			 
 		}
 
 		public IngredientDomModel[] GetAvailableIngredients()
 		{
+			
 			var availableIngredients = this.Context.Ingredients
 				.Select(i=>new IngredientDomModel{ Name=i.Name, Id=i.Id, Quantity=0}).ToArray();
 			return availableIngredients;
+			
 		}
 		public override RecipeDomModel Find( Guid id )
 		{
@@ -32,15 +34,15 @@ namespace Brewery.Data.Repositories
 		}
 		public override void Edit( RecipeDomModel domObj )
 		{
-			var recipe = this.EntitySet.Include(e=>e.Ingredients).FirstOrDefault(r=>r.Id==domObj.Id);
+			var recipe = this.EntitySet.Include(e => e.Ingredients).FirstOrDefault(r => r.Id == domObj.Id);
 			var ingredients = domObj.Ingredients.Select(i => new IngredientForRecipe { IngredientId = i.Id, RecipeId = domObj.Id, RequiredAmmount = i.Quantity }).ToList();
 			//this.Context.IngredientsForRecipe.UpdateRange(recipe.Ingredients);
 			recipe.Name = domObj.Name;
 			recipe.Description = domObj.Description;
 			recipe.Ingredients = ingredients;
 			this.EntitySet.Update(recipe);
+
 			Context.SaveChanges();
-			
 		}
 		public override IEnumerable<RecipeDomModel> GetAll()
 		{

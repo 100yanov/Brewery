@@ -135,7 +135,7 @@ namespace Brewery.Data.Repositories
 			return domObj;
 		}
 
-		public async Task<IEnumerable<TDomObj>> GetAllAsync() //todo: add way to get filtered results!
+		public async Task<IEnumerable<TDomObj>> GetAllAsync()
 		{
 			var entities =(await this.EntitySet.AsNoTracking().ToArrayAsync() );
 			var domainObjects =  this.EntityToDomainCollection(entities);
@@ -165,5 +165,7 @@ namespace Brewery.Data.Repositories
 				.ToArray();
 			return collection;
 		}
+
+		
 	}
 }
