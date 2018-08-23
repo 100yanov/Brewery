@@ -97,7 +97,7 @@ namespace Brewery.Data.Repositories
 			return result;
 		}
 
-		public void Edit( TDomObj domObj )
+		public virtual void Edit( TDomObj domObj )
 		{
 			var entity = this.DomainToEntity(domObj);
 			this.EntitySet.Update(entity);

@@ -100,7 +100,7 @@ namespace Brewery.Web.Areas.Admin.Controllers
                     .Select(i => new IngredientDomModel
                     {
                         Id = Guid.Parse(i.Id),
-                        Quantity = i.Quantity
+                        Quantity = i.Quantity,
                     });
 
                 var recipeDom = new RecipeDomModel
@@ -115,7 +115,7 @@ namespace Brewery.Web.Areas.Admin.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(Exception e)
             {
                 return View();
             }

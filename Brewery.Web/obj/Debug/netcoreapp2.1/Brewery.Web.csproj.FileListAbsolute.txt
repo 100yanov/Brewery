@@ -175,3 +175,4 @@ C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcorea
 C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Brewery.Web.dll
 C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Brewery.Web.pdb
 C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Recipe\Edit.g.cshtml.cs
+D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Recipe\Edit.g.cshtml.cs
