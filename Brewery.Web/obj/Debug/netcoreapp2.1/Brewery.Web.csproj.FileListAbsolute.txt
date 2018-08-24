@@ -188,3 +188,15 @@ D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\A
 D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Recipe\Details.g.cshtml.cs
 D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\IdentifiebleViewModel.g.cshtml.cs
 D:\stucky\Web Advanced\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\Actions.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brews\Create.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brews\Details.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brews\Edit.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Brews\Index.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Ingredients\Details.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Recipe\Details.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\Actions.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\BrewViewModel.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\IdentifiebleViewModel.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\IngredientViewModel.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\RecipeViewModel.g.cshtml.cs
+C:\Users\Stoyan Stoyanov\Desktop\homework\Brewery\Brewery.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\EditorTemplates\BrewBindingModel.g.cshtml.cs

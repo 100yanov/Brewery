@@ -12293,23 +12293,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Desi\\.nuget\\packages\\": {},
+    "C:\\Users\\Stoyan Stoyanov\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Web\\Brewery.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Stoyan Stoyanov\\Desktop\\homework\\Brewery\\Brewery.Web\\Brewery.Web.csproj",
       "projectName": "Brewery.Web",
-      "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Web\\Brewery.Web.csproj",
-      "packagesPath": "C:\\Users\\Desi\\.nuget\\packages\\",
-      "outputPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Web\\obj\\",
+      "projectPath": "C:\\Users\\Stoyan Stoyanov\\Desktop\\homework\\Brewery\\Brewery.Web\\Brewery.Web.csproj",
+      "packagesPath": "C:\\Users\\Stoyan Stoyanov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Stoyan Stoyanov\\Desktop\\homework\\Brewery\\Brewery.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Desi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Stoyan Stoyanov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12317,16 +12317,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://frtnugget.dell.ms-frt.net/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Data\\Brewery.Data.csproj": {
-              "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Data\\Brewery.Data.csproj"
+            "C:\\Users\\Stoyan Stoyanov\\Desktop\\homework\\Brewery\\Brewery.Data\\Brewery.Data.csproj": {
+              "projectPath": "C:\\Users\\Stoyan Stoyanov\\Desktop\\homework\\Brewery\\Brewery.Data\\Brewery.Data.csproj"
             },
-            "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Services\\Brewery.Services.csproj": {
-              "projectPath": "D:\\stucky\\Web Advanced\\Brewery\\Brewery.Services\\Brewery.Services.csproj"
+            "C:\\Users\\Stoyan Stoyanov\\Desktop\\homework\\Brewery\\Brewery.Services\\Brewery.Services.csproj": {
+              "projectPath": "C:\\Users\\Stoyan Stoyanov\\Desktop\\homework\\Brewery\\Brewery.Services\\Brewery.Services.csproj"
             }
           }
         }
