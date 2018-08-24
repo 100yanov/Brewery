@@ -38,18 +38,20 @@ namespace Brewery.Web
 					Configuration.GetConnectionString("DefaultConnection")));
 			services.AddDefaultIdentity<User>()
 				.AddEntityFrameworkStores<BreweryDbContext>();
-
+            
 			//todo: add repositories services.AddScoped<>
 			//todo: add use cases
 			AddRepositories(services);
 			AddManagers(services);
 
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddTransient<DbSeed>();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
 
 	
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure( IApplicationBuilder app, IHostingEnvironment env )
+		public void Configure( IApplicationBuilder app, IHostingEnvironment env, DbSeed seed)
 		{
 			if (env.IsDevelopment())
 			{
@@ -62,7 +64,9 @@ namespace Brewery.Web
 				app.UseHsts();
 			}
 
-			app.UseHttpsRedirection();
+            seed.Seed();
+
+            app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseCookiePolicy();
 
