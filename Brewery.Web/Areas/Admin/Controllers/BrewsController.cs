@@ -30,9 +30,18 @@ namespace Brewery.Web.Areas.Admin.Controllers
 		}
 
 		// GET: Brews/Details/5
-		public ActionResult Details( int id )
+		public ActionResult Details( string id )
 		{
-			return View();
+			var domModel = this.manager.Find(Guid.Parse(id));
+			var model = new BrewViewModel
+			{
+				Id= id,
+				Name = domModel.Name,
+				Description = domModel.Description,
+				RecipeName = domModel.RecipeName
+			};
+
+			return View(model);
 		}
 
 		// GET: Brews/Create
@@ -77,19 +86,37 @@ namespace Brewery.Web.Areas.Admin.Controllers
 		}
 
 		// GET: Brews/Edit/5
-		public ActionResult Edit( int id )
+		public ActionResult Edit( string id )
 		{
-			return View();
+			var brew = this.manager.Find(Guid.Parse(id));
+			var model = new BrewBindingModel();
+
+			var recipes = this.recipeManager.GetAll();
+
+			SelectList listItems = new SelectList(recipes, "Id", "Name", model.RecipeId);
+
+			model = new BrewBindingModel(brew, listItems);
+
+			return View(model);
 		}
 
 		// POST: Brews/Edit/5
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Edit( int id, IFormCollection collection )
+		public ActionResult Edit( BrewBindingModel model, string id)
 		{
 			try
 			{
-				// TODO: Add update logic here
+				BrewDomModel toEdit = new BrewDomModel
+				{
+					Id = Guid.Parse(id),
+					Name = model.Name,
+					Description = model.Description,
+					RecipeId = Guid.Parse(model.RecipeId)
+
+				};
+
+				this.manager.Edit(toEdit);
 
 				return RedirectToAction(nameof(Index));
 			}

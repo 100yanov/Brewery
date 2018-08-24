@@ -55,7 +55,7 @@ using Brewery.Web.Areas.Admin.Models.BindingModels;
             WriteLiteral("<h2>Create</h2>\r\n");
             EndContext();
             BeginContext(44, 131, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8cf7d4987f3d4a968348833caee041e1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18bbbfe7a8784cd592104307b51ab6c7", async() => {
                 BeginContext(65, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();

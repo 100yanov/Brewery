@@ -26,12 +26,12 @@ namespace Brewery.Data.Repositories
 			return availableIngredients;
 			
 		}
-		public override RecipeDomModel Find( Guid id )
-		{
-			var entity = this.EntitySet.Include(e => e.Ingredients).FirstOrDefault(e => e.Id == id);
-			var result = this.EntityToDomain(entity);
-			return result;
-		}
+		//public override RecipeDomModel Find( Guid id )
+		//{
+		//	var entity = this.EntitySet.Include(e => e.Ingredients).FirstOrDefault(e => e.Id == id);
+		//	var result = this.EntityToDomain(entity);
+		//	return result;
+		//}
 		public override void Edit( RecipeDomModel domObj )
 		{
 			var recipe = this.EntitySet.Include(e => e.Ingredients).FirstOrDefault(r => r.Id == domObj.Id);
@@ -44,12 +44,12 @@ namespace Brewery.Data.Repositories
 
 			Context.SaveChanges();
 		}
-		public override IEnumerable<RecipeDomModel> GetAll()
-		{
-			var recipesWithIngredients = this.EntitySet.Include(e => e.Ingredients);
-			var domRecipes = this.EntityToDomainCollection(recipesWithIngredients);
-			return domRecipes;
-		}
+		//public override IEnumerable<RecipeDomModel> GetAll()
+		//{
+		//	var recipesWithIngredients = this.EntitySet.Include(e => e.Ingredients);
+		//	var domRecipes = this.EntityToDomainCollection(recipesWithIngredients);
+		//	return domRecipes;
+		//}
 		
 		protected override Recipe DomainToEntity( RecipeDomModel domObj )
 		{
@@ -72,31 +72,69 @@ namespace Brewery.Data.Repositories
 			return recipeEntity;
 		}
 
-		protected override RecipeDomModel EntityToDomain( Recipe entity )
-		{
-			var recipeDomModel = new RecipeDomModel()
-			{
-				Id = entity.Id,
-				Name = entity.Name,
-				Description = entity.Description,
-			};
-			Guid[] ingredientIds = entity.Ingredients.Select(i => i.IngredientId).ToArray();
+		//protected override RecipeDomModel EntitiesToDomain( Recipe entity )
+		//{
+		//	var recipeDomModel = new RecipeDomModel()
+		//	{
+		//		Id = entity.Id,
+		//		Name = entity.Name,
+		//		Description = entity.Description,
+		//	};
+		//	Guid[] ingredientIds = entity.Ingredients.Select(i => i.IngredientId).ToArray();
 
-			Dictionary<Guid,string> ingredientNames = this.Context
-				.Ingredients
-				.Select( i=> new { i.Id, i.Name })
-				.Where(i => ingredientIds.Contains(i.Id))
-				.ToDictionary(i=>i.Id,n=>n.Name);
-			
-			var ingredientDoms = entity.Ingredients.Select(i => new IngredientDomModel
+		//	Dictionary<Guid,string> ingredientNames = this.Context
+		//		.Ingredients
+		//		.Select( i=> new { i.Id, i.Name })
+		//		.Where(i => ingredientIds.Contains(i.Id))
+		//		.ToDictionary(i=>i.Id,n=>n.Name);
+
+		//	var ingredientDoms = entity.Ingredients.Select(i => new IngredientDomModel
+		//	{
+		//		Name = ingredientNames[i.IngredientId],
+		//		Id = i.IngredientId,
+		//		Quantity = i.RequiredAmmount,
+		//	})
+		//			  .ToList();
+		//	recipeDomModel.Ingredients = ingredientDoms;
+		//	return recipeDomModel;
+		//}
+
+		protected override IEnumerable<RecipeDomModel> EntitiesToDomain( IQueryable<Recipe> entities )
+		{
+			var modelCollection = new List<RecipeDomModel>();
+			entities = entities.Include(e => e.Brews).Include(e => e.Ingredients).ThenInclude(i=>i.Ingredient);
+
+			foreach (var e in entities)
 			{
-				Name = ingredientNames[i.IngredientId],
-				Id = i.IngredientId,
-				Quantity = i.RequiredAmmount,
-			})
-					  .ToList();
-			recipeDomModel.Ingredients = ingredientDoms;
-			return recipeDomModel;
+				var model = new RecipeDomModel()
+				{
+					Id = e.Id,
+					Name = e.Name,
+					Description = e.Description,
+					Ingredients = IngredientToDom(e.Ingredients),
+					//todo: add brews?
+				};
+				modelCollection.Add(model);
+			}
+
+			return modelCollection;
+		}
+
+		private ICollection<IngredientDomModel> IngredientToDom( ICollection<IngredientForRecipe> ingredients )
+		{
+			var ingredientModels = new List<IngredientDomModel>();
+			foreach (var i in ingredients)
+			{
+				var ingredient = new IngredientDomModel
+				{
+					Id = i.IngredientId,
+					Name = i.Ingredient.Name,
+					Quantity = i.RequiredAmmount
+				};
+
+				ingredientModels.Add(ingredient);
+			}
+			return ingredientModels;
 		}
 	}
 }

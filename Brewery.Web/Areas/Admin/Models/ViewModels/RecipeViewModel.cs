@@ -19,12 +19,12 @@ namespace Brewery.Web.Areas.Admin.Models.ViewModels
 			this.Description = model.Description;
 			if (model.Ingredients!=null)
 			{
-				this.Ingredinets = model.Ingredients.Select(i=>new RecipeIngredientViewModel(i)).ToList();
+				this.Ingredients = model.Ingredients.Select(i=>new RecipeIngredientViewModel(i)).ToList();
 			}
 			
 		}
 		public string Name { get; set; }
 		public string Description { get; set; }
-		public ICollection<RecipeIngredientViewModel> Ingredinets { get; set; }
+		public ICollection<RecipeIngredientViewModel> Ingredients { get; set; }
 	}
 }

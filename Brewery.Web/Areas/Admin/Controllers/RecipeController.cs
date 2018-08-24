@@ -32,9 +32,11 @@ namespace Brewery.Web.Areas.Admin.Controllers
         }
 
         // GET: Recipe/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(Guid id)
         {
-            return View();
+			var recipe = this.manager.Find(id);
+			var model = new RecipeViewModel(recipe);
+            return View(model);
         }
 
         // GET: Recipe/Create

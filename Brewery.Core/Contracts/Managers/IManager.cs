@@ -7,11 +7,11 @@ namespace Brewery.Core.Contracts.Managers
 	{
 		TDomObj Find( TKey id );
 
-		Task<TDomObj> FindAsync( TKey id );
+		//Task<TDomObj> FindAsync( TKey id );
 
 		IEnumerable<TDomObj> GetAll();
 
-		Task<IEnumerable<TDomObj>> GetAllAsync();
+		//Task<IEnumerable<TDomObj>> GetAllAsync();
 
 		TKey Add( TDomObj domObj );
 

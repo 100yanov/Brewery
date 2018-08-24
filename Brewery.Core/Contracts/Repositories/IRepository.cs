@@ -6,10 +6,8 @@ namespace Brewery.Core.Contracts.Repositories
 	public interface IRepository<TDomObj, TKey>
 	{
 		TDomObj Find( TKey id );
-		Task<TDomObj> FindAsync( TKey id );
-		IEnumerable<TDomObj> GetAll();
 
-		Task<IEnumerable<TDomObj>> GetAllAsync();
+		IEnumerable<TDomObj> GetAll();
 
 		TKey Add( TDomObj domObj );
 

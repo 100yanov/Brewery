@@ -114,31 +114,23 @@ namespace Brewery.Data.Repositories
 			return result;
 		}
 
-		public virtual IEnumerable<TDomObj> GetAll()//todo: add way to get filtered results!
-		{
-			var entities = this.EntitySet.AsNoTracking().ToArray();
-			var domainObjects = this.EntityToDomainCollection(entities);
-			return domainObjects;
-
-		}
+		
 
 		public virtual TDomObj Find(TKey id )
 		{
-			var entity = this.EntitySet.FirstOrDefault(e=>e.Id.Equals(id));
-			var domObj = this.EntityToDomain(entity);
-			return domObj;
-		}
-		public async Task <TDomObj> FindAsync( TKey id )
-		{
-			var entity = await this.EntitySet.FirstOrDefaultAsync(e => e.Id.Equals(id));
-			var domObj = this.EntityToDomain(entity);
-			return domObj;
+			var entities = this.EntitySet
+				.AsNoTracking()
+				.Where(e => e.Id.Equals(id));
+
+			var entity = this.EntitiesToDomain(entities).SingleOrDefault();  
+
+			return entity;
 		}
 
-		public async Task<IEnumerable<TDomObj>> GetAllAsync()
+		public  IEnumerable<TDomObj> GetAll()
 		{
-			var entities =(await this.EntitySet.AsNoTracking().ToArrayAsync() );
-			var domainObjects =  this.EntityToDomainCollection(entities);
+			var entities = this.EntitySet.AsNoTracking();
+			var domainObjects = EntitiesToDomain(entities);
 
 			return domainObjects;
 		}
@@ -147,15 +139,7 @@ namespace Brewery.Data.Repositories
 		
 
 		//private methods
-		protected abstract TDomObj EntityToDomain(TEntity entity);
-		protected IEnumerable<TDomObj>EntityToDomainCollection(IEnumerable<TEntity> entities )
-		{
-			var collection = entities
-				.Select(d => this.EntityToDomain(d))
-				.ToArray();
-			return collection;
-		}
-
+	
 		protected abstract TEntity DomainToEntity( TDomObj domObj );
 
 		protected IEnumerable<TEntity> DomainToEntityCollection( IEnumerable<TDomObj> domObjs )
@@ -166,6 +150,6 @@ namespace Brewery.Data.Repositories
 			return collection;
 		}
 
-		
+		protected abstract IEnumerable<TDomObj> EntitiesToDomain( IQueryable<TEntity> entities );
 	}
 }

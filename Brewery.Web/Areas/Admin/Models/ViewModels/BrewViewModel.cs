@@ -14,6 +14,7 @@ namespace Brewery.Web.Areas.Admin.Models.ViewModels
 		}
 		public BrewViewModel(BrewDomModel model)
 		{
+			this.Id = model.Id.ToString();
 			this.Name = model.Name;
 			this.Description = model.Description;
 			this.RecipeName = model.RecipeName;

@@ -13,12 +13,7 @@ namespace Brewery.Data.Repositories
 		public BrewRepository( BreweryDbContext contextInjection )
 			: base(contextInjection) { }
 
-		public override BrewDomModel Find( Guid id )
-		{
-			var entity = this.EntitySet.Include(e => e.Recipe).FirstOrDefault(e => e.Id == id);
-			var result = this.EntityToDomain(entity);
-			return result;
-		}
+	
 		//public override void Edit( RecipeDomModel domObj )
 		//{
 		//	var recipe = this.EntitySet.Include(e => e.Recipe).FirstOrDefault(r => r.Id == domObj.Id);
@@ -45,21 +40,21 @@ namespace Brewery.Data.Repositories
 			return brewEntity;
 		}
 
-		protected override BrewDomModel EntityToDomain( Brew entity )
-		{
+		//protected override BrewDomModel EntityToDomain( Brew entity )
+		//{
 			
-			var brewDomObj = new BrewDomModel
-			{
-				Id = entity.Id,
-				Name = entity.Name,
-				Description = entity.Description,
-				RecipeId = entity.RecipeId,
-				RecipeName = entity.Recipe.Name
-			};
-			return brewDomObj;
-		}
+		//	var brewDomObj = new BrewDomModel
+		//	{
+		//		Id = entity.Id,
+		//		Name = entity.Name,
+		//		Description = entity.Description,
+		//		RecipeId = entity.RecipeId,
+		//		RecipeName = entity.Recipe.Name
+		//	};
+		//	return brewDomObj;
+		//}
 
-		protected /*override*/ IEnumerable<BrewDomModel> ProjectEntities( IQueryable<Brew> entities )
+		protected override IEnumerable<BrewDomModel> EntitiesToDomain( IQueryable<Brew> entities )
 		{
 			var modelCollection = new List<BrewDomModel>();
 			entities = entities.Include(e => e.Recipe);
@@ -74,8 +69,7 @@ namespace Brewery.Data.Repositories
 					RecipeId = e.Recipe.Id
 				};
 
-				// var model = this.SetProperties(e, new BrewDomModel());
-
+				
 				modelCollection.Add(model);
 
 			}

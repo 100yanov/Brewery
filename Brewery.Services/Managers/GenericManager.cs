@@ -71,20 +71,13 @@ namespace Brewery.Services.Managers
 			return this.repository.GetAll();
 		}
 
-		public async Task<IEnumerable<TDomObj>> GetAllAsync()
-		{
-			return await this.repository.GetAllAsync();
-		}
+	
 		public TDomObj Find( TKey id )
 		{
 			var domObj = this.repository.Find(id);
 		
 			return domObj;
 		}
-		public async Task<TDomObj> FindAsync( TKey id )
-		{
-			var domObj = await this.repository.FindAsync(id);
-			return domObj;
-		}
+		
 	}
 }
