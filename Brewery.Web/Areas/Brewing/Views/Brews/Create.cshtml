@@ -1,0 +1,9 @@
+﻿@model BrewBindingModel
+<h2>Create New Brew</h2>
+<hr>
+<form method="post">
+    @Html.AntiForgeryToken()
+    @Html.EditorFor(r => r)
+
+    <input type="submit" />
+</form>

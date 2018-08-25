@@ -7,6 +7,6 @@ namespace Brewery.Models
 {
 	public class User : IdentityUser
 	{
-		
+		//todo
 	}
 }

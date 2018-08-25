@@ -43,7 +43,14 @@ namespace Brewery.Web
                     Configuration.GetConnectionString("DefaultConnection")));
        
             services
-               .AddIdentity<IdentityUser, IdentityRole>()
+               .AddIdentity<IdentityUser, IdentityRole>(
+                o => 
+                {
+                    o.Password.RequireDigit = true;
+                    o.Password.RequiredLength=6;
+                 }
+                
+                )
                .AddDefaultUI()
                .AddDefaultTokenProviders()
                .AddEntityFrameworkStores<BreweryDbContext>();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Brewery.Models
 {
@@ -9,7 +10,10 @@ namespace Brewery.Models
 		{
 			this.Recipes = new List<IngredientForRecipe>();
 		}
+        [Required]
+        [Range(0,double.MaxValue)]
 		public double Quantity { get; set; }
+
 		public ICollection<IngredientForRecipe>Recipes{ get; set; }
 	}
 }

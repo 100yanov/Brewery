@@ -1,0 +1,33 @@
+﻿@page "{id}"
+@model EditModel
+@{
+}
+<h1>Edit User</h1>
+
+
+<form method="post">
+    <input class="form-control" asp-for="Password" />
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input class="form-control" type="text" asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input class="form-control" asp-for="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <select asp-for="RoleId" asp-items="@Model.UserRoles"></select>
+        <span asp-validation-for="RoleId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input class="btn btn-danger" type="submit">
+    </div>
+</form>
+<a class="btn btn-info" asp-page="Index">Back to Index</a>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

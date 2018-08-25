@@ -1,0 +1,12 @@
+﻿@model RecipeBindingModel
+<h2>Create New Recipe</h2>
+<hr>
+<form method="post">
+    @Html.AntiForgeryToken()
+    @Html.EditorFor(r => r)
+
+    @Html.EditorFor(i => i.Ingredients)
+
+    <input class="btn btn-default" type="submit" />
+    <a asp-action="Index" class="btn btn-default">Back to Index</a>
+</form>

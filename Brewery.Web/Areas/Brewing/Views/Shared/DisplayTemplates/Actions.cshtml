@@ -1,0 +1,8 @@
+﻿@model string
+<div>
+    @if (User.IsInRole(Roles.Admin))
+    {
+        <a asp-action="Edit" asp-route-id="@Model">Edit</a>
+    }
+    <a asp-action="Index">Back to List</a>
+</div>

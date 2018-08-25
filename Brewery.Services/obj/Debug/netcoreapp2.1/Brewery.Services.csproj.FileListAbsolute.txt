@@ -1,0 +1,12 @@
+D:\stucky\Web Advanced\Brewery\Brewery.Services\bin\Debug\netcoreapp2.1\Brewery.Services.deps.json
+D:\stucky\Web Advanced\Brewery\Brewery.Services\bin\Debug\netcoreapp2.1\Brewery.Services.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Services\bin\Debug\netcoreapp2.1\Brewery.Services.pdb
+D:\stucky\Web Advanced\Brewery\Brewery.Services\bin\Debug\netcoreapp2.1\Brewery.Core.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Services\bin\Debug\netcoreapp2.1\Brewery.Core.pdb
+D:\stucky\Web Advanced\Brewery\Brewery.Services\obj\Debug\netcoreapp2.1\Brewery.Services.csprojAssemblyReference.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Services\obj\Debug\netcoreapp2.1\Brewery.Services.csproj.CoreCompileInputs.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Services\obj\Debug\netcoreapp2.1\Brewery.Services.AssemblyInfoInputs.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Services\obj\Debug\netcoreapp2.1\Brewery.Services.AssemblyInfo.cs
+D:\stucky\Web Advanced\Brewery\Brewery.Services\obj\Debug\netcoreapp2.1\Brewery.Services.csproj.CopyComplete
+D:\stucky\Web Advanced\Brewery\Brewery.Services\obj\Debug\netcoreapp2.1\Brewery.Services.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Services\obj\Debug\netcoreapp2.1\Brewery.Services.pdb

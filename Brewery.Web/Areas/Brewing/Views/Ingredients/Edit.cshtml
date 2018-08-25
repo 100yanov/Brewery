@@ -1,0 +1,9 @@
+﻿@model IngredientBindingModel
+    <h2>Edit</h2>
+    <hr>
+    <form method="post">
+        @Html.AntiForgeryToken()
+        @Html.EditorFor(m => m)
+        <input class="btn btn-default" type="submit">
+        <a asp-action="Index" class="btn btn-default">Back to Index</a>
+    </form>

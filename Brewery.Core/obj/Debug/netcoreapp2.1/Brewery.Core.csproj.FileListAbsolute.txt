@@ -1,0 +1,9 @@
+D:\stucky\Web Advanced\Brewery\Brewery.Core\bin\Debug\netcoreapp2.1\Brewery.Core.deps.json
+D:\stucky\Web Advanced\Brewery\Brewery.Core\bin\Debug\netcoreapp2.1\Brewery.Core.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Core\bin\Debug\netcoreapp2.1\Brewery.Core.pdb
+D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.csprojAssemblyReference.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.csproj.CoreCompileInputs.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.AssemblyInfoInputs.cache
+D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.AssemblyInfo.cs
+D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.dll
+D:\stucky\Web Advanced\Brewery\Brewery.Core\obj\Debug\netcoreapp2.1\Brewery.Core.pdb

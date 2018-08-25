@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+}
+<h2>Users</h2>
+<hr>
+<div>
+    <a class="btn btn-info" asp-page="Add">Add New</a>
+
+</div> 
+<br>
+<div>
+    <table id="table_id" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Username
+                </th>
+                <th>
+                    Role
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var u in Model.Users)
+            {
+                <tr>
+                    <td>
+                        @u.Username
+                    </td>
+                    <td class="description">
+                        @u.Role
+                    </td>
+                    <td>
+                        <partial name="IdentifiableViewModelActions" model="@u.Id">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

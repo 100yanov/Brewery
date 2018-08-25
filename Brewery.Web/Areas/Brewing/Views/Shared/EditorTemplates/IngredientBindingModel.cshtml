@@ -1,0 +1,12 @@
+﻿@model IngredientBindingModel
+
+<div class="form-group">
+    <label asp-for="@Model.Name"></label>
+    <input class="form-control" type="text" asp-for="@Model.Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="@Model.Quantity"></label>
+    <input class="form-control" type="text" asp-for="@Model.Quantity" />
+    <span asp-validation-for="Quantity" class="text-danger"></span>
+</div>

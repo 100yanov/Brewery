@@ -1,0 +1,46 @@
+﻿@model RecipeListViewModel
+    <h2>Recipe</h2>
+    <hr>
+    <div>
+        <a class="btn btn-info" asp-action="Create">Add New</a>
+    </div>
+    <br>
+    <div>
+        <table id="table_id" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Ingredients Count
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var recipe in Model.Recipes)
+                {
+                    <tr>
+                        <td>
+                            @recipe.Name
+                        </td>
+                        <td class="description">
+                            @recipe.Description
+                        </td>
+                        <td class="recipe">
+                            @recipe.Ingredients.Count()
+                        </td>
+                        <td>
+                            <partial name="IdentifiableViewModelActions" model="@recipe.Id">
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
