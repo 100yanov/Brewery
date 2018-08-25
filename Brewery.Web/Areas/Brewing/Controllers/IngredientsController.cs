@@ -90,7 +90,7 @@ namespace Brewery.Web.Areas.Brewing.Controllers
 		{
             if (!ModelState.IsValid)
             {
-                return View(nameof(Edit), id);
+                return RedirectToAction("Edit", "Ingredient", id);
             }
             try
 			{

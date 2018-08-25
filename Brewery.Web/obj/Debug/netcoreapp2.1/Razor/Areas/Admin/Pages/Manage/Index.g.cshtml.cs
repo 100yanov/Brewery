@@ -63,7 +63,7 @@ using Brewery.Web.Areas.Admin.Models;
             WriteLiteral("<h2>Users</h2>\r\n<hr>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(66, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f6ada1434f74db9a0d2d5b914c4d438", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7dbe04542ba14ef58d2545cb66754dc7", async() => {
                 BeginContext(105, 7, true);
                 WriteLiteral("Add New");
                 EndContext();
@@ -135,7 +135,7 @@ using Brewery.Web.Areas.Admin.Models;
             WriteLiteral("\r\n                    </td>\r\n                    <td>\r\n                        ");
             EndContext();
             BeginContext(848, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "70071d59e6c8486e8c2a71730bfb99b5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "98b9210671224c85b37b357e35ccec8e", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

@@ -63,7 +63,7 @@ using Brewery.Core.Constants;
             WriteLiteral("    <h2>Edit</h2>\r\n    <hr>\r\n    ");
             EndContext();
             BeginContext(60, 302, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46a643a433e14c7e9ed7755e8d57b13e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45d5cbe6c30e43dca2248307e185d82c", async() => {
                 BeginContext(80, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
@@ -98,7 +98,7 @@ using Brewery.Core.Constants;
                 WriteLiteral("\r\n        <input class=\"btn btn-default\" type=\"submit\">\r\n        ");
                 EndContext();
                 BeginContext(286, 63, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1bf54f2833aa4d2d9f47ea92742352bb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "82479451e93142a198edebb243b33c03", async() => {
                     BeginContext(332, 13, true);
                     WriteLiteral("Back to Index");
                     EndContext();

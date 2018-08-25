@@ -60,7 +60,7 @@ using Brewery.Core.Constants;
             WriteLiteral("<h2>Edit</h2>\r\n<hr>\r\n");
             EndContext();
             BeginContext(46, 117, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0421621e24a41359163bbe3b6454e6c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43e4c812d1974dd0841463adb0af8e68", async() => {
                 BeginContext(66, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();

@@ -61,7 +61,7 @@ using Brewery.Core.Constants;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(15, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62098acea9fd4d91a93f5bf8a9ad3e69", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be10ef7b196f498d967441bf80bfac44", async() => {
                 BeginContext(104, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -108,7 +108,7 @@ using Brewery.Core.Constants;
             WriteLiteral("    ");
             EndContext();
             BeginContext(159, 94, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d6cc48759594631b2025a81a614871f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba8f394d19ac4435ae664fac3128ef6e", async() => {
                 BeginContext(245, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -146,7 +146,7 @@ using Brewery.Core.Constants;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(259, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1a1079630044aa5acb822dce717bca2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e45d65ddda844cfb20b4f6126df23f0", async() => {
                 BeginContext(346, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

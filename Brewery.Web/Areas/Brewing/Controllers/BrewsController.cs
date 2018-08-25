@@ -67,7 +67,7 @@ namespace Brewery.Web.Areas.Brewing.Controllers
 		{
             if (!ModelState.IsValid)
             {
-                return View("Index");
+                return RedirectToAction(nameof(Create));
             }
             try
 			{
@@ -83,8 +83,8 @@ namespace Brewery.Web.Areas.Brewing.Controllers
 			}
 			catch
 			{
-				return View();
-			}
+                return RedirectToAction(nameof(Create));
+            }
 		}
 
 		// GET: Brews/Edit/5
@@ -109,7 +109,8 @@ namespace Brewery.Web.Areas.Brewing.Controllers
 		{
             if (!ModelState.IsValid)
             {
-                return View(nameof(Edit), id);
+
+                return RedirectToAction("Edit", "Brew", id);
             }
             try
 			{
@@ -128,8 +129,8 @@ namespace Brewery.Web.Areas.Brewing.Controllers
 			}
 			catch
 			{
-				return View();
-			}
+                return RedirectToAction("Edit", "Edit", id);
+            }
 		}
 
 		// GET: Brews/Delete/5

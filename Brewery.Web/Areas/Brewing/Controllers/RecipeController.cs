@@ -101,7 +101,8 @@ namespace Brewery.Web.Areas.Brewing.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(nameof(Edit), id);
+                ModelState.AddModelError("Error","Error!");
+                return RedirectToAction("Edit","Recipe", id);
             }
             try
             {
@@ -126,7 +127,8 @@ namespace Brewery.Web.Areas.Brewing.Controllers
             }
             catch(Exception e)
             {
-                return View();
+                ModelState.AddModelError("Error", e.Message);
+                return RedirectToAction("Edit", "Recipe", id);
             }
         }
 
@@ -151,8 +153,9 @@ namespace Brewery.Web.Areas.Brewing.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(Exception e)
             {
+                
                 return View();
             }
         }
@@ -163,8 +166,8 @@ namespace Brewery.Web.Areas.Brewing.Controllers
 			{
 				Id = id,
 			};
-			
-			return result;
+          
+            return result;
 		}
 	}
 }

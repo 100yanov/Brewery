@@ -2,6 +2,7 @@
 <h2>Create New Recipe</h2>
 <hr>
 <form method="post">
+    <div asp-validation-summary="All"></div>
     @Html.AntiForgeryToken()
     @Html.EditorFor(r => r)
 

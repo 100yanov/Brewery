@@ -68,7 +68,7 @@ using Brewery.Core.Constants;
             WriteLiteral("\r\n<h2>Ingredients</h2>\r\n<hr>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(114, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fedaaa1f421a42b7bc1e19772ea7098a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "da4fd4ef56a243299d8f3c495cb9db31", async() => {
                 BeginContext(158, 7, true);
                 WriteLiteral("Add New");
                 EndContext();
@@ -140,7 +140,7 @@ using Brewery.Core.Constants;
             WriteLiteral("\r\n                    </td>\r\n                    <td>\r\n                        ");
             EndContext();
             BeginContext(906, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "22d68b14105b407f9941e1dddf598c13", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "14d778a9d85942b68eca6a82f4c6fef1", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

@@ -73,7 +73,7 @@ using Brewery.Web.Areas.Admin.Models;
             WriteLiteral("    ");
             EndContext();
             BeginContext(59, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04cdb148ae3d4ceaa38a47496ad8a489", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6470fbf566d6446fb0e369e7b6190ab0", async() => {
                 BeginContext(141, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -111,7 +111,7 @@ using Brewery.Web.Areas.Admin.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(155, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "00f353e3406a41c2bbea66320af136ba", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b78413623e774eb9b85c8916c53fb10b", async() => {
                 BeginContext(238, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

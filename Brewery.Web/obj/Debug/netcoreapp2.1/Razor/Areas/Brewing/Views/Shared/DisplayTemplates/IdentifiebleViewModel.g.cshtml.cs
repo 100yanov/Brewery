@@ -60,7 +60,7 @@ using Brewery.Core.Constants;
             WriteLiteral("<div>\r\n    ");
             EndContext();
             BeginContext(27, 51, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1f85a3c790604a80a7cc118ada9b16bb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5d527fa581db46d8a1b31d5337832f6a", async() => {
                 BeginContext(70, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -95,7 +95,7 @@ using Brewery.Core.Constants;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(84, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "805313c478644a179ca8c2bec81fa275", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1142f2f852a34993a24829a987b9cb3d", async() => {
                 BeginContext(106, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

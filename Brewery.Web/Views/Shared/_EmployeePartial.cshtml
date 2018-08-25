@@ -1,7 +1,7 @@
 ﻿@if (User.IsInRole(Roles.Admin)|| User.IsInRole(Roles.Employee))
 {
     <li><a asp-area="Brewing" asp-controller="Ingredients">Ingredients</a></li>
-    <li><a asp-area="Brewing" asp-controller="Ingredients">Recipes</a></li>
-    <li><a asp-area="Brewing" asp-controller="Ingredients">Brews</a></li>
+    <li><a asp-area="Brewing" asp-controller="Recipe">Recipes</a></li>
+    <li><a asp-area="Brewing" asp-controller="Brews">Brews</a></li>
 
 }

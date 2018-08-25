@@ -75,7 +75,7 @@ Write(Model.Username);
             WriteLiteral(" ?</h4>\r\n");
             EndContext();
             BeginContext(145, 234, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "633eac6e2750446f99245cb4ad4e23b6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0bfb2088429d4d79bee9386546849409", async() => {
                 BeginContext(165, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
@@ -90,7 +90,7 @@ Write(Html.AntiForgeryToken());
                 WriteLiteral(";\r\n    <div class=\"form-group\">\r\n        <input class=\"btn btn-danger\" type=\"submit\" value=\"Yes!\">\r\n  \r\n        ");
                 EndContext();
                 BeginContext(307, 51, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "440721fb639748078bbdd10166f96f2f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c5fb4dd42ac485a9bbf19f2c48e7711", async() => {
                     BeginContext(351, 3, true);
                     WriteLiteral("No!");
                     EndContext();

@@ -25,7 +25,8 @@ namespace Brewery.Web.Areas.Brewing.Models.BindingModels
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
-		public string Id { get; set; }
+
+        public string Id { get; set; }
 
 		[Required]
 		[Range(0, double.MaxValue)]	
