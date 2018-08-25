@@ -26,9 +26,10 @@ namespace Brewery.Data.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
-                    b.Property<Guid?>("RecipeId");
+                    b.Property<Guid>("RecipeId");
 
                     b.HasKey("Id");
 
@@ -42,7 +43,8 @@ namespace Brewery.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<double>("Quantity");
 
@@ -73,7 +75,8 @@ namespace Brewery.Data.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -249,7 +252,8 @@ namespace Brewery.Data.Migrations
                 {
                     b.HasOne("Brewery.Models.Recipe", "Recipe")
                         .WithMany("Brews")
-                        .HasForeignKey("RecipeId");
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Brewery.Models.IngredientForRecipe", b =>

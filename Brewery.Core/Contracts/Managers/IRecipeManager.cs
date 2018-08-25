@@ -8,5 +8,6 @@ namespace Brewery.Core.Contracts.Managers
 	public interface IRecipeManager: IManager<RecipeDomModel,Guid>
 	{
 		IngredientDomModel[] GetAvailableIngredients();
-	}
+        int GetBrewsCount(Guid guid);
+    }
 }

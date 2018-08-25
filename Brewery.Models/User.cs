@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Brewery.Models
 {
-	public class User: IdentityUser<Guid>
+	public class User : IdentityUser
 	{
 		
 	}

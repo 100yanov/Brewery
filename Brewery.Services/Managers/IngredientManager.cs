@@ -11,5 +11,9 @@ namespace Brewery.Services.Managers
 			: base(repository)
 		{
 		}
-	}
+        public int GetRecipesCount(Guid id)
+        {
+            return ((IIngredientRepository)this.repository).GetRecipesCount(id);
+        }
+    }
 }

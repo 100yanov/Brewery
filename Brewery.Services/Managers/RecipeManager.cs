@@ -5,17 +5,22 @@ using System;
 
 namespace Brewery.Services.Managers
 {
-	public class RecipeManager : GenericManager<RecipeDomModel, Guid>, IRecipeManager
-	{
-		public RecipeManager( IRecipeRepository repository ) : base(repository)
-		{
-		
-		}
-		public IngredientDomModel[] GetAvailableIngredients()
-		{
-			var recipeRepo = (IRecipeRepository)this.repository;
+    public class RecipeManager : GenericManager<RecipeDomModel, Guid>, IRecipeManager
+    {
+        public RecipeManager(IRecipeRepository repository) : base(repository)
+        {
 
-			return recipeRepo.GetAvailableIngredients();
-		}
-	}
+        }
+        public IngredientDomModel[] GetAvailableIngredients()
+        {
+            var recipeRepo = (IRecipeRepository)this.repository;
+
+            return recipeRepo.GetAvailableIngredients();
+        }
+        public int GetBrewsCount(Guid id)
+        {
+            var recipeRepo = (IRecipeRepository)this.repository;
+            return recipeRepo.GetBrewsCount(id);
+        }
+    }
 }

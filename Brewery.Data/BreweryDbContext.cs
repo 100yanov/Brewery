@@ -6,7 +6,7 @@ using System;
 
 namespace Brewery.Data
 {
-	public class BreweryDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
+	public class BreweryDbContext : IdentityDbContext
 	{
 
 		public DbSet<Recipe>Recipes{ get; set; }

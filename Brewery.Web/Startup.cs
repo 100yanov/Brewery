@@ -7,100 +7,107 @@ using Brewery.Services.Managers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace Brewery.Web
 {
-	public class Startup
-	{
-		public Startup( IConfiguration configuration )
-		{
-			Configuration = configuration;
-		}
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
-		public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; }
 
-		// This method gets called by the runtime. Use this method to add services to the container.
-		public void ConfigureServices( IServiceCollection services )
-		{
-			services.Configure<CookiePolicyOptions>(options =>
-			{
-				// This lambda determines whether user consent for non-essential cookies is needed for a given request.
-				options.CheckConsentNeeded = context => true;
-				options.MinimumSameSitePolicy = SameSiteMode.None;
-			});
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
 
-			services.AddDbContext<BreweryDbContext>(options =>
-				options.UseSqlServer(
-					Configuration.GetConnectionString("DefaultConnection")));
-			services.AddDefaultIdentity<User>()
-				.AddEntityFrameworkStores<BreweryDbContext>();
-            
-			//todo: add repositories services.AddScoped<>
-			//todo: add use cases
-			AddRepositories(services);
-			AddManagers(services);
+            services.AddDbContext<BreweryDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+       
+            services
+               .AddIdentity<IdentityUser, IdentityRole>()
+               .AddDefaultUI()
+               .AddDefaultTokenProviders()
+               .AddEntityFrameworkStores<BreweryDbContext>();
+
+           ;
+
+            AddRepositories(services);
+            AddManagers(services);
 
             services.AddTransient<DbSeed>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-		}
+        }
 
-	
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure( IApplicationBuilder app, IHostingEnvironment env, DbSeed seed)
-		{
-			if (env.IsDevelopment())
-			{
-				app.UseDeveloperExceptionPage();
-				app.UseDatabaseErrorPage();
-			}
-			else
-			{
-				app.UseExceptionHandler("/Home/Error");
-				app.UseHsts();
-			}
 
-            seed.Seed();
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DbSeed seed)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+
+           
 
             app.UseHttpsRedirection();
-			app.UseStaticFiles();
-			app.UseCookiePolicy();
+            app.UseStaticFiles();
+            app.UseCookiePolicy();
 
-			app.UseAuthentication();
+            app.UseAuthentication();
 
-			app.UseMvc(routes =>
-			{
-				//		routes.MapRoute(
-				//	name: "Default",
-				//	url: "{controller}/{action}/{id}",
-				//	defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-				//);
-				routes.MapRoute(
-					name: "area",
-					template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-				routes.MapRoute(
-					name: "default",
-					template: "{controller=Home}/{action=Index}/{id?}");
-			});
-		}
-		private static void AddManagers( IServiceCollection services )
-		{
-			services.AddScoped<IIngredientManager, IngredientManager>();
-			services.AddScoped<IRecipeManager, RecipeManager>();
-			services.AddScoped<IBrewManager, BrewManager>();
-		}
+            app.UseMvc(routes =>
+            {
+               
+                routes.MapRoute(
+                    name: "area",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
+            seed.Seed();
+        }
+        private static void AddManagers(IServiceCollection services)
+        {
+            services.AddScoped<IIngredientManager, IngredientManager>();
+            services.AddScoped<IRecipeManager, RecipeManager>();
+            services.AddScoped<IBrewManager, BrewManager>();
+        }
 
-		private static void AddRepositories( IServiceCollection services )
-		{
-			services.AddScoped<IIngredientRepository, IngredientRepository>();
-			services.AddScoped<IRecipeRepository, RecipeRepository>();
+        private static void AddRepositories(IServiceCollection services)
+        {
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
+            services.AddScoped<IRecipeRepository, RecipeRepository>();
 
-			services.AddScoped<IBrewRepository, BrewRepository>();
-		}
+            services.AddScoped<IBrewRepository, BrewRepository>();
+        }
 
-	}
+
+    }
 }

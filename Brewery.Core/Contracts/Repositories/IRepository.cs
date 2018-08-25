@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Brewery.Core.Contracts.Repositories
@@ -20,8 +21,8 @@ namespace Brewery.Core.Contracts.Repositories
 		void Edit( TDomObj domObj );
 
 		Task<int> EditAsync( TDomObj domObj );
-
-		void Delete( TKey id );
+       
+        void Delete( TKey id );
 
 		Task<int> DeleteAsync( TKey id );
 

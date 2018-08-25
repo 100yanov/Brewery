@@ -1,9 +1,19 @@
-﻿@{ 
+﻿@using Microsoft.AspNetCore.Identity
+@{
     Layout = "/Areas/Identity/Pages/_Layout.cshtml";
 }
 
 <h2>Manage your account</h2>
+@if (@User.IsInRole("Admin".Trim()))
+{
+    <h1>You are an admin</h1>
+    @User.Identity.Name
+}
+else
+{
+    <h1>You are NOT admin</h1>
 
+}
 <div>
     <h4>Change your account settings</h4>
     <hr />

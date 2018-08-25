@@ -20,61 +20,36 @@ namespace Brewery.Data
         {
             this.services = services;
         }
-        public void Seed()
+
+        public void Seed(/*IServiceProvider services*/)
         {
             using (var serviceScope = this.services.CreateScope())
             {
-                BreweryDbContext context = serviceScope
-                    .ServiceProvider.GetService<BreweryDbContext>();
-
-                context.Database.Migrate();
-
-                RoleManager<IdentityRole<Guid>> roleManager =
-                    serviceScope
+                BreweryDbContext context = serviceScope.ServiceProvider.GetService<BreweryDbContext>();
+                context.Database.EnsureCreated();
+        
+                RoleManager<IdentityRole> roleManager = serviceScope
                     .ServiceProvider
-                    .GetService<RoleManager<IdentityRole<Guid>>>();
-
-                UserManager<User> userManager =
-                    serviceScope.ServiceProvider.GetService<UserManager<User>>();
-
+                    .GetService<RoleManager<IdentityRole>>();
+                
+                UserManager<IdentityUser> userManager = serviceScope.ServiceProvider.GetService<UserManager<IdentityUser>>();
+                //if (context.UserRoles.Any())
+                //{
+                //    return;
+                //}
                 EnsureAdminUser(roleManager, userManager);
-
-                // context.SaveChanges(); //does nothing
+               
+               // context.SaveChanges();
             }
         }
-
-        private static void EnsureAdminUser(RoleManager<IdentityRole<Guid>> roleManager, UserManager<User> userManager)
+        private void EnsureAdminUser(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
         {
-            var roleResult = roleManager
-               .CreateAsync(new IdentityRole < Guid > (Roles.Admin))
-               .Result;
-
-            var clientRoleResult = roleManager
-               .CreateAsync(new IdentityRole<Guid>(Roles.Employee))
-               .Result;
-
-            if (userManager.Users.Any())
-            {
-                return;
-            }
-
-            User admin = new User()
-            {
-                //FirstName = "Admin",
-                //LastName = "Admin",
-                UserName = "admin",
-                Email = "admin@test.tst"
-            };
-
-
-            var userResult = userManager
-             .CreateAsync(admin, "Pass12!")
-             .Result;
-
-            var adminUser = userManager
-                  .AddToRoleAsync(admin, Roles.Admin)
-                  .Result;
-
+            IdentityUser admin = new IdentityUser() { UserName = "Admin@test.tst", Email = "Admin@test.tst" };
+            var userResult = userManager.CreateAsync(admin, "Pass123").Result;
+            var adminRoleResult = roleManager.CreateAsync(new IdentityRole(Roles.Admin)).Result;
+            var employeeRoleResult = roleManager.CreateAsync(new IdentityRole(Roles.Employee)).Result;
+            IdentityUser newUser = userManager.FindByEmailAsync(admin.Email).Result;
+            var adminUser = userManager.AddToRoleAsync(newUser, Roles.Admin).Result;
         }
     }
 }

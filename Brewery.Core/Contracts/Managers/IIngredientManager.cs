@@ -3,7 +3,8 @@ using System;
 
 namespace Brewery.Core.Contracts.Managers
 {
-	public interface IIngredientManager : IManager<IngredientDomModel, Guid>
-	{
-	}
+    public interface IIngredientManager : IManager<IngredientDomModel, Guid>
+    {
+        int GetRecipesCount(Guid id);
+    }
 }

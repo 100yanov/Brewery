@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.Web", "Brewery.Web\Brewery.Web.csproj", "{8C4119F8-60C2-4B16-871D-A84AD28A744E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Web", "Brewery.Web\Brewery.Web.csproj", "{8C4119F8-60C2-4B16-871D-A84AD28A744E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.Data", "Brewery.Data\Brewery.Data.csproj", "{B0DB4603-588E-41A5-935F-CBB20E69CAE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Data", "Brewery.Data\Brewery.Data.csproj", "{B0DB4603-588E-41A5-935F-CBB20E69CAE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.Models", "Brewery.Models\Brewery.Models.csproj", "{A6DC9F2A-B7CD-4CD0-8EFA-EAAE59E8A910}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Models", "Brewery.Models\Brewery.Models.csproj", "{A6DC9F2A-B7CD-4CD0-8EFA-EAAE59E8A910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.Services", "Brewery.Services\Brewery.Services.csproj", "{27EBD0A8-03E7-4283-9817-84BC30E54995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Services", "Brewery.Services\Brewery.Services.csproj", "{27EBD0A8-03E7-4283-9817-84BC30E54995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.Core", "Brewery.Core\Brewery.Core.csproj", "{983B7664-B328-487E-AF2A-D92AFDCA3CF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Core", "Brewery.Core\Brewery.Core.csproj", "{983B7664-B328-487E-AF2A-D92AFDCA3CF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
